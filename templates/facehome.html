@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+
+.upload-gif{
+    width: 400px;
+    height: 300px;
+    border-radius: 20%;
+    position: absolute;
+     top: 270px;
+    left: 880px;
+    font-family: "ubuntu", Arial, sans-serif;
+    font-size: 40px;
+    font-color: #ffffff;
+}
+
+.imgButton{
+  text-align:center;
+   position: absolute;
+    top: 370px;
+    left: 1000px;
+}
+
+.btn{
+  border: 1px solid green;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+.btn2{
+  color: green;
+}
+
+.btn2:hover{
+  color: #fff;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: green;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn2::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.btn2:hover::before{
+  height: 180%;
+}
+
+</style>
+<style>
+*
+{
+	margine: 0;
+	padding: 0;
+	font-family: consolas;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #031321;
+}
+.wavy
+{
+	position: realtive;
+	-webkit-box-reflect: below -12px liner-gradient(transparent, rgba(0,0,0,0.2));
+}
+
+.wavy span
+{
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	font-size: 2em;
+	text-transform: uppercase;
+	animation: animate 1s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+0%
+{
+	transform: translateY(0px);
+}
+20%
+{
+	transform: translateY(-20px);
+}
+40%,100%
+{
+	transform: translateY(0px);
+}
+}
+</style>
+
+<style>
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #031321;
+	font-family: consolas;
+}
+a{
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	color: #2196f3;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 24px;
+	overflow: hidden;
+	transition: 0.2s;
+}
+a:hover
+{
+	color: #255784;
+	background: #2196f3;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3; 
+                 transition-delay: 1s;
+}
+a span
+{
+	position: absolute;
+	display: block;
+}
+a span:nth-child(1)
+{
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#2196f3);
+}
+a:hover span:nth-child(1)
+{
+	left: 100%;
+	transition: 1s;
+}
+a span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#2196f3);
+}
+a:hover span:nth-child(3)
+{
+	right: 100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+a span:nth-child(2)
+{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#2196f3);
+}
+a:hover span:nth-child(2)
+{
+	top: 100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+a span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#2196f3);
+}
+a:hover span:nth-child(4)
+{
+	bottom: 100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+}
+</style>
+
+</head>
+ <body>
+<div>    
+<img src="facegif.gif">
+</div>
+<div class="wavy">
+	
+	<span>F</span>
+	<span>a</span>
+	<span>c</span>
+	<span>e</span>
+	<span></span>
+	<span>D</span>
+	<span>e</span>
+	<span>t</span>
+	<span>e</span>
+	<span>c</span>
+	<span>t</span>
+	<span>i</span>
+	<span>o</span>
+	<span>n</span>
+	<span style="--i:8;">.</span>
+	<span style="--i:9;">.</span>
+	<span style="--i:10;">.</span>
+</div>
+	<div class ="imgButton">
+<button id="upload" class="btn btn2">Proceed</button>
+</div>
+
+</body>
+</html>
