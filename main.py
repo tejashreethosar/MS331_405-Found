@@ -19,8 +19,8 @@ mail= Mail(app)
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'shreyaswaitforitdorle@gmail.com'
-app.config['MAIL_PASSWORD'] = 'doyoufeelincharge'
+app.config['MAIL_USERNAME'] = 'email1'
+app.config['MAIL_PASSWORD'] = 'password'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -66,7 +66,7 @@ def whome():
     w=session['path']
     isWeap=weapDetect(w)
     if (isWeap==1):
-        msg = Message('Weapon Detected', sender = 'shreyaswaitforitdorle@gmail.com', recipients = ['shreyasdorle.it@gmail.com'])
+        msg = Message('Weapon Detected', sender = 'email1', recipients = ['email2'])
         msg.body = "Weapon has been detected at given location!"
         mail.send(msg)
         return render_template('/fail2.html')
